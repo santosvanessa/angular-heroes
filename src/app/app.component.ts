@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component} from '@angular/core';
 
 import { Hero } from './hero';
 
@@ -17,15 +17,13 @@ const HEROES : Hero[] = [
 ];
 
 @Component({
-  selector: 'hero-detail',
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'
-]})
+  styleUrls: ['./app.component.css']})
   export class AppComponent {
   title = 'Tour of Heroes';
   selectedHero : Hero;
   heroes = HEROES;
-  @Input() hero: Hero;
   onSelect(hero: Hero) : void {
       this.selectedHero = hero;
   }
