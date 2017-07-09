@@ -20,9 +20,7 @@ const HEROES : Hero[] = [
   selector: 'hero-detail',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']})
-  export class HeroDetailComponent {
-      @Input() hero: Hero;
-}
+
   export class AppComponent {
   title = 'Tour of Heroes';
   selectedHero : Hero;
@@ -31,4 +29,7 @@ const HEROES : Hero[] = [
   onSelect(hero: Hero) : void {
       this.selectedHero = hero;
   }
+}
+export class HeroDetailComponent {
+    @Input() hero: Hero;
 }
